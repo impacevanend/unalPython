@@ -77,4 +77,9 @@ if vueltas > 0:
 elif vueltas == 0: 
     print(f'No tienes vueltas a tú favor.: {vueltas}')
 else:
-    print(f'Quedas deviendo: {abs(vueltas)}') #-3200 
+    print(f'Quedas deviendo: {abs(vueltas)}') #-3200
+    
+    
+    
+    
+    
