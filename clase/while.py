@@ -55,10 +55,19 @@
 #     i +=1
 
 #* pares impares
-i = 1
-while i <=1000:
+# i = 1
+# while i <=1000:
+#     if i%2 == 0:
+#         print(f'Número par: {i}')
+#     else:
+#         print(f'Número impar: {i}')
+#     i += 1
+
+i = 10
+
+while  i>0:
+
     if i%2 == 0:
         print(f'Número par: {i}')
-    else:
-        print(f'Número impar: {i}')
-    i += 1
+        
+    i -= 1
