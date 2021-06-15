@@ -165,32 +165,92 @@ print(suma)
 #     else:
 #         print("Número es nulo") 
 
-comprobar = True
+# comprobar = True
 
-while comprobar == True:
+# while comprobar == True:
 
-    n = int(input("Ingrese la cantidad de datos que desea procesar: "))
+#     n = int(input("Ingrese la cantidad de datos que desea procesar: "))
 
-    if n > 0:
+#     if n > 0:
         
-        positivos = 0
-        negativos = 0
-        nulos = 0
+#         positivos = 0
+#         negativos = 0
+#         nulos = 0
         
-        for i in range(n):
+#         for i in range(n):
             
-            dato = int(input("Ingrese un número natural: "))
+#             dato = int(input("Ingrese un número natural: "))
             
-            if dato >0:
-                positivos +=1
+#             if dato >0:
+#                 positivos +=1
             
-            elif dato < 0:
-                negativos += 1
-            else:
-                nulos += 1
+#             elif dato < 0:
+#                 negativos += 1
+#             else:
+#                 nulos += 1
             
-        print(f'La cantidad de números positivos es: {positivos}\nLa cantidad de números negativos es: {negativos}\nLa cantidad de números nulos es: {nulos}\n')
-        comprobar = False
-    else:
-        print("El número ingresado no es correcto. Inténtelo nuevamente.")
+#         print(f'La cantidad de números positivos es: {positivos}\nLa cantidad de números negativos es: {negativos}\nLa cantidad de números nulos es: {nulos}\n')
+#         comprobar = False
+#     else:
+#         print("El número ingresado no es correcto. Inténtelo nuevamente.")
 
+
+
+# *Construye un programa que, al recibir como datos el peso, la altura y el género de n persona que pertenecen a un estado
+# *de un país, obtenga el promedio del peso y el promedio de la altura, tando de la población masculica como de la
+# *femeninda
+
+n = int(input("Ingrese la cantidad de personas a registrar"))
+
+
+
+contadorM = 0
+contadorF = 0
+
+pesoM = 0
+pesoF = 0
+
+alturaM = 0
+alturaF = 0
+
+promedioM = 0
+promedioMF = 0
+
+promedioMA = 0
+promedioMAF = 0
+
+
+
+for i in range(n):
+    
+    genero = input("Ingrese su genero: ")
+    
+    
+    if genero == "masculino":
+        alturaM = float(input("Ingrese su altura: "))
+        pesoM = float(input("Ingrese su peso: "))
+        contadorM +=1
+        alturaM += alturaM
+        pesoM += pesoM
+        
+    elif genero == "femenino":
+        
+        alturaF = float(input("Ingrese su altura: "))
+        pesoF = float(input("Ingrese su peso: "))
+        
+        contadorF +=1
+        alturaF += alturaF
+        pesoF += pesoF
+        
+    
+promedioM = pesoM/contadorM
+promedioMA = alturaM/contadorM
+
+promedioMF = pesoF/contadorF
+promedioMAF = alturaF/contadorF
+        
+print(f'peso: {pesoM} altura: {alturaM} peso:cantidad:{contadorM} promedio peso: {promedioM} promedio altura:{promedioMA}')
+print(f'peso: {pesoF} altura: {alturaF} peso:cantidad:{contadorF} promedio peso: {promedioMF} promedio altura:{promedioMAF}')
+    
+    
+        
