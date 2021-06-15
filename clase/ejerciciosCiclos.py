@@ -254,3 +254,5 @@ print(f'peso: {pesoF} altura: {alturaF} peso:cantidad:{contadorF} promedio peso:
     
     
         
+        
+        
