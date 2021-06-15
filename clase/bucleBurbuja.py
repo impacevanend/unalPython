@@ -1,5 +1,6 @@
-#*Algoritmo de ordenamiento burbuja.append()
 
+#*lgoritmo de ordenamiento burbuja.append()
+"""
 
 lista = [5,7,3,1,8,4,9,2,6] #Longitud de la lista menos uno.
 
@@ -22,7 +23,60 @@ for i in range(len(lista)-1): #Vueltas a la lista
             
 print(lista)#Comprobación del algoritmo
 
-#Optimización del ordenamiento tipo burbuja
+"""
+
+#*Optimización del ordenamiento tipo burbuja
 
 
-#Oredenamiento de selección
+lista = [5,7,3,1,8,4,9,2,6] 
+
+comparaciones = 0
+
+hay_cambios = True #Centinela
+
+"""
+for i in range(len(lista)-1): 
+    
+    for j in range(len(lista)- i -1): #Se reduc el número de comparaciones, ahora aparecerán solo 36 iteraciones.
+        
+        comparaciones += 1
+        
+       
+        
+        if lista[j] > lista [j+1]:
+           
+    
+            temporal = lista[j]
+            lista[j] = lista[j + 1]
+            lista[j+1] = temporal
+            
+            
+            
+print(lista)
+print(comparaciones)
+"""
+i = 0 #* Aplicando estrategía anterior. 
+
+while hay_cambios and i < len(lista) -1: 
+    
+    hay_cambios = False
+    
+    for j in range(len(lista)-i -1): #Se reduc el número de comparaciones, ahora aparecerán solo 36 iteraciones.
+        
+        comparaciones += 1
+        
+       
+        
+        if lista[j] > lista [j+1]:
+           
+    
+            temporal = lista[j]
+            lista[j] = lista[j + 1]
+            lista[j+1] = temporal
+            
+            hay_cambios = True
+            
+    i += 1 #*Incrementando la i        
+            
+print(lista)
+print(comparaciones)
