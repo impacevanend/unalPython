@@ -1,0 +1,34 @@
+sindicato_superior = input()
+sindicato_unitario = input()
+
+sindicatos = input()
+
+contador_sup = 0
+contador_unitario = 0
+contador_n = 0
+conversor = " "
+lista = list(sindicatos)
+
+
+for i in lista:
+    if (i in sindicato_superior) and (i  in sindicato_unitario)== False:
+        contador_sup += 1 
+    elif (i in sindicato_unitario) and (i in sindicato_superior)== False:
+        contador_unitario += 1 
+    else:
+        contador_n +=1
+    
+    
+        
+    if contador_unitario > contador_sup and contador_n >= 0:
+        conversor += "U"
+        contador_n = 0
+        
+    if  contador_sup > contador_unitario and contador_n >= 0:
+        conversor += "S"
+        contador_n = 0
+    else:
+        conversor += "N"
+        contador_n = 0
+        
+print(conversor)
