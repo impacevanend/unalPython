@@ -133,3 +133,28 @@ for fila in matriz_nula2:
     print(fila)
     
 """
+#*Rellenar matriz
+"""
+Programa que crea una matriz con los datos que introduces:
+Filas, columnas y valores para cada elemento.
+"""
+
+filas = int(input("Introduce número de filas: "))
+columnas = int(input("Introduce número de columnas: "))
+
+matriz = []
+
+for i in range(filas):
+    matriz.append([])
+    for j in range(columnas):
+        valor = float(input("Fila {}, columna {}: ".format(i+1, j+1)))
+        matriz[i].append(valor)
+        
+print()
+for fila in matriz:
+    print("[",end=" ")
+    for elemento in fila:
+        print("{:8.2f}".format(elemento), end=" ")
+    print("]")
+print()
+    
