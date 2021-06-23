@@ -13,7 +13,7 @@ Matriz fila: vector fila -> A=(a11,a12,a13... a1n)1*n
 
 
 """
-
+"""
 a = [[21,18,35,40],
       [19, 11,21, 14],
       [12, 15,20, 30]]
@@ -46,3 +46,90 @@ else:
         for elemento in fila:
             print(elemento, end=" ")
         print("]")
+        
+"""
+
+"""
+Matrices son conjuntos de datos, ordenados en finlas y columnas.
+
+*Matriz de ejemplo:
+
+Comsuma de una granja
+                    trigo       cebada      pienso      Paja
+            
+            vacas   21          18            35        40
+            
+            Cerdos  19          11            21        14
+            
+            vacas   12          15            20        30
+            
+"""
+
+#*Simulación de matrices con listas anidads:
+
+consumo = [[21,18,35,40],
+           [19, 11,21,14],
+           [12,15,20,30]]
+
+acumulador = 0
+#*mostrando datos de la lista(recoriendo lista)
+"""
+for lista in consumo:
+    print("[", end=" ")
+    for elemento in lista:
+        print(elemento, end=" ")
+    print("]")
+"""    
+#*Creación de lista nula
+"""
+matriz_cero = [[0]*15]*10 #*Forma incorrecta, crea multiples veces la misma lista
+
+for fila in matriz_cero:
+    print(fila)
+"""
+#*Forma correcta
+"""
+lista_nula = []
+
+for i in range(10):
+    lista_nula.append([0]*15) 
+
+lista_nula[2][2] = 2   
+
+for fila in lista_nula:
+    print(fila)   
+"""  
+#*Forma utilizando dos bucles:
+"""
+
+matriz_nula2 = []
+
+for i in range(10):
+    matriz_nula2.append([])
+    for j in range(15):
+        matriz_nula2[i].append(0)
+        
+
+for fila in matriz_nula2:
+    print(fila)
+
+"""
+"""
+matriz_nula2 = []
+
+cantidad_filas = int(input("¿Catindad de filas de la matriz?: "))
+cantidad_columnas = int(input("¿Catindad de filas de la matriz?: "))
+dato = 0
+
+for i in range(cantidad_filas):
+    matriz_nula2.append([])
+    for j in range(cantidad_columnas):
+        while dato < cantidad_columnas:
+            dato = int(input("Ingrese valor: "))
+            matriz_nula2[i].append(dato)
+        
+
+for fila in matriz_nula2:
+    print(fila)
+    
+"""
