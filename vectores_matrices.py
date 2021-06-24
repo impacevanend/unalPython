@@ -245,20 +245,24 @@ Definir una función que dadas dos matrices calcule su multiplicación:
 
 -Columnas de la primera matriz han de ser igual a filas de la segunda.
 -Resultado será una matriz de orden filas de la 1° por columnas de la 2°
+
 """
+""""
 a = [[1,2,3], 
      [4,5,6]]
 
 b = [[1,2],
      [3,4],
      [5,6]]
-
+"""
 """
 [1 2 3]      *     [1  2]    =       [22    28]         
 [4 5 6]            [3  4]            [22    28]
        2*3         [3  4] 3*2                  2*2  
-"""
 
+
+"""
+"""
 def multiplicar_matrices(m1, m2):
     if len(m1[0]) == len(m2):
         m3 = []
@@ -287,4 +291,45 @@ else:
         for elemento in fila:
             print(elemento, end=" ")
         print("]")          
-                
+
+"""           
+#*Matriz traspuesta
+"""
+Traspuesta de una matriz:
+Trasponer (cambiar, trasladar) los elementos de las filas a las columnas, y los elementos de las
+columnas a las filas.
+
+m = [[1,2,3],
+     [4,5,6]]
+     
+     
+b = [[1,4], 
+     [2,5],
+     [3,6]]
+
+"""
+
+matriz = [[1,2,3], 
+          [4,5,6]]
+
+def trasponer(m):
+    t = []
+    for i in range(len(m[0])):
+        t.append([])
+        for j in range(len(m)):
+            t[i].append(m[j][i])
+    return t
+
+traspuesta = trasponer(matriz)
+
+for linea in matriz:
+    for elemento in linea:
+        print(elemento, end=" ")
+    print()
+
+print("---------------------")
+
+for linea in traspuesta:
+    for elemento in linea:
+        print(elemento, end=" ")
+    print()        
