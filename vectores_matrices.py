@@ -308,7 +308,7 @@ b = [[1,4],
      [3,6]]
 
 """
-
+"""
 matriz = [[1,2,3], 
           [4,5,6]]
 
@@ -333,3 +333,52 @@ for linea in traspuesta:
     for elemento in linea:
         print(elemento, end=" ")
     print()        
+"""
+
+#*Rotar una matriz
+
+"""
+Rotar una matriz 90 grados en el sentido de lasmanecillas de un reloj
+"""
+
+una_matriz =[
+    [11,12,13,14,15],
+    [21,22,23,24,25],
+    [31,32,33,34,35],
+    [41,42,43,44,45]
+]
+
+flecha = [
+    [0,0,0,0,1,0,0],
+    [0,0,0,0,1,1,0],
+    [1,1,1,1,1,1,1],
+    [0,0,0,0,1,1,0],
+    [0,0,0,0,1,0,0]
+]
+
+
+def rotar_matriz(matriz):
+    rotada = []
+    for i in range(len(matriz[0])):
+        rotada.append([])
+        for j in range(len(matriz)):
+            rotada[i].append(matriz[len(matriz)-1-j][i])
+    return rotada
+    
+print("-----------------------------")
+
+for fila in flecha:
+    for e in fila:
+        print(e, end=" ")
+    print()
+    
+rotada_1 = rotar_matriz(flecha)
+
+for fila in rotada_1:
+    for e in fila:
+        print(e, end=" ")
+    print()  
+    
+    
+ 
+    
