@@ -138,6 +138,7 @@ for fila in matriz_nula2:
 Programa que crea una matriz con los datos que introduces:
 Filas, columnas y valores para cada elemento.
 """
+"""
 
 filas = int(input("Introduce número de filas: "))
 columnas = int(input("Introduce número de columnas: "))
@@ -157,4 +158,83 @@ for fila in matriz:
         print("{:8.2f}".format(elemento), end=" ")
     print("]")
 print()
+"""
+
+"""
+Definir una función que dadas dos matrices calcule su suma:
+-Sólo se pueden sumar matrices el mismo orden.
+-El resultado es otra matrizdel mismo orden que las sumadas.
+"""
+"""
+a = [[21,18,35,40],
+     [19,11,21,14],
+     [12,15,20,30]]
+
+b=[[11,7,21,32],
+   [9,15,24,10],
+   [23,8,12,22],]
+
+
+def sumar_matriz(): 
+"""
+
+"""
+replit-> https://replit.com/@leobusta/mintic13#main.py
+
+"""
+
+"""
+Comsuma de una granja
+
+                        GRANJA A
+                    trigo       cebada      pienso      Paja
+            
+            vacas   21          18            35        40
+            
+            Cerdos  19          11            21        14
+            
+            vacas   12          15            20        30
+            
+                        GRANJA B
+                    trigo       cebada      pienso      Paja
+            
+            vacas   11           7            21        32
+            
+            Cerdos   9          15            24        10
+            
+            vacas   23           8            12        22
+            
+"""
+
+
+a = [[21,18,35,40],
+     [19,11,21,14],
+     [12,15,20,30]]
+
+b=[[11,7,21,32],
+   [9,15,24,10],
+   [23,8,12,22],]
+
+def sumar_matrices(m1, m2):
+    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
+        m3 = []
+        for i in range(len(m1)):
+            m3.append([])
+            for j in range(len(m1[0])):
+                m3[i].append(m1[i][j] + m2[i][j])
+        
+        return m3
+    else:
+        return None
     
+c = sumar_matrices(a,b)
+
+if c == None:
+    print("No se pueden sumar") 
+else:
+    for fila in c:
+        print("[", end=" ")
+        for elemento in fila:
+            print(elemento, end=" ")
+        print("]")
+        
