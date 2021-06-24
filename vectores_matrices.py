@@ -206,7 +206,7 @@ Comsuma de una granja
             
 """
 
-
+"""
 a = [[21,18,35,40],
      [19,11,21,14],
      [12,15,20,30]]
@@ -238,3 +238,53 @@ else:
             print(elemento, end=" ")
         print("]")
         
+"""
+#*Multiplicación de matrices 
+"""
+Definir una función que dadas dos matrices calcule su multiplicación:
+
+-Columnas de la primera matriz han de ser igual a filas de la segunda.
+-Resultado será una matriz de orden filas de la 1° por columnas de la 2°
+"""
+a = [[1,2,3], 
+     [4,5,6]]
+
+b = [[1,2],
+     [3,4],
+     [5,6]]
+
+"""
+[1 2 3]      *     [1  2]    =       [22    28]         
+[4 5 6]            [3  4]            [22    28]
+       2*3         [3  4] 3*2                  2*2  
+"""
+
+def multiplicar_matrices(m1, m2):
+    if len(m1[0]) == len(m2):
+        m3 = []
+        for i in range(len(m1)):
+            m3.append([])
+            for j in range(len(m2[0])):
+                m3[i].append(0)
+                
+        for i in range(len(m1)):
+            for j in range(len(m2[0])):
+                for k in range(len(m1[0])):
+                    print((i,j),(i,k),(j,k),(k,j))
+                    m3[i][j] += m1[i][k] * m2[k][j]
+        return m3
+    else:
+        return None
+
+
+c = multiplicar_matrices(a,b)  
+
+if c == None:
+    print("No se pueden multiplicar")
+else:
+    for fila in c:
+        print("[", end=" ")
+        for elemento in fila:
+            print(elemento, end=" ")
+        print("]")          
+                
