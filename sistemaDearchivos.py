@@ -71,14 +71,126 @@ with open("files/data4.txt","r", encoding="utf-8") as f:
             print(line, end=" ")
 """
 
-with open("files/salesJan2009.csv","r")as f:
-    lines = f.readlines()
- 
-total = 0  
-for line in lines:
-    if "United Kingdowm"  in line:
-        registro = line.split(",")
-        total += 1
-        
-    print(total)
-        
+#*Abrir y leer un archivo
+"""
+with open("files/data.txt", "r") as f:
+    data = f.read()
+    print(data)
+
+"""
+
+#*Escribir y crear un archivo
+"""
+Abre el archivo en modo de escritura creando el archivo si no existencia
+o sobreescribiendo el archivo si existe.
+"""
+"""
+with open("files/wdata.txt","w") as f:
+    data = "Estamos en el archivo 123\n"
+    f.write(data)
+    f.write(data)
+    f.write(data)
+"""
+
+#*Agregar contenido a un archivo existente
+"""
+with open("files/wdata.txt", "a") as f:
+    data = "más cosas \n"
+    f.write(data)
+    f.write(data)
+    f.write(data)
+"""
+
+#*Otros modos de abrir archivos Python son:
+"""
+r+ ->(read/write)hace cambios al archivo y a la vez leerlo el punto se ubica
+al principio
+a+->(append/write)Se abre el archivo para escribir y leer del
+archivo. El punto se ubica al final del archivo
+-x (exclusive creation ): usado exclusivamente para crear
+un archivo. Si existe un archivo con el mismo nombre la
+funci ́on fallar ́a.
+b : Para leer archivos binarios se agrega la letra b al final del
+modificador. Por ejemplo, para leer “rb”, y los otros ser ́ıan
+“wb”, “ab”, “r+b” y “a+b”.
+
+"""
+
+#*Lecturas de archivos de texto
+"""
+with open("files/data1.txt", "r") as f:
+    print(f.read())
+"""
+    
+#*Lecturas de un archivo con tíldes
+#Agregar parametro encoding="utf-8"
+"""
+with open("files/data1.txt", "r", encoding="utf-8") as f:
+    print(f.read())
+"""
+    
+#* Leer una fracción, de un archivo read("cantidad bytes a leer")
+"""
+with open("files/data1.txt","r",encoding="utf-8") as f:
+    linea1 = f.read(6) #Lee los 6 primero  bytes
+    linea2 = f.read(10) #Lee los 10 primero  bytes
+    
+    print(linea1)
+    print(linea2)
+"""
+    
+#*Leer archivo línea por línea
+"""
+with open("files/data1.txt", "r",encoding="utf-8") as f:
+    linea1 = f.readline() #lee la primera linea
+    linea2 = f.readline() #lee la segunda linea
+    
+print(linea1,end=" ")
+print(linea2,end=" ")
+"""
+"""
+"""
+#*Cargar listas de archivo como una lista
+"""
+with open("files/data1.txt","r", encoding="utf-8")as f:
+    print("Nombre del archivo: ", f.name)
+    lista = f.readlines()
+    
+print(lista)
+"""
+#Todo Sección del profesor Manuel Gozales (leyendo archivos de texto)#
+#*Nota: Mantener datos para sesiones posteriores se designa como "persistencia" 
+
+#archivo = open("files/saludo.txt", "r")
+
+#texto = archivo.read() #*Convierte a string el contenido del archivo
+
+#texto = archivo.readlines()#*Convierte un archivo en lista
+
+#texto = archivo.readline()#*Solo devuleve una sola linea.
+"""
+
+while True:
+    #*Este bucle lee linea por linea sin cargar todo el archivo a memoria
+    linea = archivo.readline().strip()
+    if linea == "":
+        break
+    else:
+        print(linea)
+"""
+    
+"""
+lista_formateada = []
+
+for elemento in texto:
+
+    linea = elemento.strip("\n")
+    lista_formateada.append(linea)
+    
+    #*Con este for, se puede recorrer el archivo y eliminar los saltos de linea.
+print(lista_formateada) 
+"""
+"""
+archivo.close() #*Cerrar el archivo despues de utilizarlo.
+"""
+

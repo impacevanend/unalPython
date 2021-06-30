@@ -34,3 +34,9 @@ caracterI = " ".join(cantidato)#*Convierte las listas en cadeas y les asigna un 
 caracterII = " ".join(cantidad_votos)#*Convierte las listas en cadeas y les asigna un espacio
 print(caracterI)
 print(caracterII)
+
+"""
+Todo Resultado esperado ++++ Salida del programa
+T A C H Z O H M F    T A C H Z O H M F
+3 3 4 1 3 3 1 1 5    3 3 4 1 3 3 1 1 5
+"""
