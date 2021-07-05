@@ -193,4 +193,102 @@ print(lista_formateada)
 """
 archivo.close() #*Cerrar el archivo despues de utilizarlo.
 """
+"""
+todo utf-8
+archivo = open("files/saludo.txt", "r", encoding="utf-8")
+texto = archivo.read()
+archivo.close()
+print(texto)
+"""
+#Todo contando lineas de un archivo 
 
+#archivo = open("files/2000-0.txt", "r", encoding="utf-8")
+
+#*Conando los datos de la lista creada
+#lineas = archivo.readlines()
+#print(len(lineas))
+#*Contando teniendo el texto entero
+"""
+texto = archivo.read()
+
+n = 0
+
+for i in texto:
+    
+    
+    if i == "\n":
+        n +=1
+"""
+#Todo realizando el conteo linea a linea con readline
+"""
+n = 0
+
+while True:
+    if archivo.readline() != "":
+        n += 1
+    else:
+        break  
+
+print(n)
+archivo.close()
+"""        
+#todo otra forma de contar lineas 
+"""
+n = 0
+
+for linea in archivo:
+    print(linea)
+    n +=1
+    
+    if n == 10: #*Muestra sólo las diez primeras lineas.
+        break
+
+print(f"Contador de lineas: {n}")
+archivo.close()
+"""
+#TodoContando palabras II
+
+"""
+Mostrar qué cinco palabras de más de 12 letras aparecen más veces en el Quijote, y cuántas veces
+paparece cada una.
+"""
+"""
+archivo = open("files/2000-0.txt", "r", encoding="utf-8")
+
+texto = archivo.read()
+
+archivo.close()
+
+lista = texto.split() #*Separa todas las palabras del texto por espacio.
+
+palabras = {}
+
+
+for elemento in lista:
+    palabra = elemento.strip(".").strip(",").strip(";").strip(":")
+    if len(palabra)>12:
+        palabras.setdefault(palabra,0)
+        palabras[palabra] +=1
+
+
+
+for i in range(5):
+    numero_mayor = 0
+    for palabra in palabras:
+          if palabras[palabra] > numero_mayor:
+              numero_mayor = palabras[palabra]
+              palabra_mayor = palabra
+    print(palabra_mayor, ":", numero_mayor)
+    del palabras[palabra_mayor]
+     
+"""
+
+#*Métodos Seek y tell
+
+
+archivo = open("files/2000-0.txt", "r", encoding="utf-8")
+
+texto = archivo.read()
+print(texto)
+
+archivo.close()

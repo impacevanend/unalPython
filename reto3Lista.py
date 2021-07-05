@@ -1,9 +1,9 @@
-voto = ["T","T","T","A","A","A","C","C","C","C","H","Z","Z","Z","O","O","O","H","M","F","F","F","F","F"]
+voto = ["T","T","T","A","A","A","C","C","C","C","H","Z","Z","Z","O","O","O","H","M","F","F","F","F","F"]# Linea de prueba, para validar funcionamiento del código
 
-#* list(input().split()) -> linea para entrada del programa de validación.
-#
+#* list(input().split()) -> linea para entrada para la plataforma.
 
-#
+
+
 
 print(voto)
 
@@ -37,6 +37,6 @@ print(caracterII)
 
 """
 Todo Resultado esperado ++++ Salida del programa
-T A C H Z O H M F    T A C H Z O H M F
-3 3 4 1 3 3 1 1 5    3 3 4 1 3 3 1 1 5
+T A C H Z O H M F            T A C H Z O H M F
+3 3 4 1 3 3 1 1 5            3 3 4 1 3 3 1 1 5
 """
