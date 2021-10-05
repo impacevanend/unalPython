@@ -22,6 +22,7 @@ lista = [8,12,3,11,5,9,10,4,15,7]
 
 def particionado(lista):
     pivote = lista[0]
+    #utiliza listas auxiliares, por lo tanto utiliza más espacio de memoria
     menores = []
     mayores = []
     
